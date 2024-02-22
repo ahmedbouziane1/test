@@ -1,0 +1,28 @@
+package test;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Entrez le nom de l'employé : ");
+        String nom = scanner.nextLine();
+
+        System.out.print("Entrez la date d'embauche de l'employé (jj/mm/aaaa) : ");
+        String dateEmbauche = scanner.nextLine();
+
+        System.out.print("Entrez le nombre d'heures travaillées par l'employé : ");
+        int heuresTravaillees = scanner.nextInt();
+
+        System.out.print("Entrez le salaire de l'employé : ");
+        double salaire = scanner.nextDouble();
+
+        Employe employe = new Employe(nom, salaire, dateEmbauche, heuresTravaillees);
+
+        double salaireComplet = employe.getSalaireComplet();
+        System.out.println("Le salaire complet de l'employé est : " + salaireComplet + " DHS.");
+
+        scanner.close();
+    }
+}
