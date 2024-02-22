@@ -1,0 +1,61 @@
+package test;
+
+public class Employe {
+    private String nom;
+    private double salaire;
+    private String datedembauche;
+    private int heuresTravaillees;
+
+    public Employe(String nom, double salaire, String datedembauche, int heuresTravaillees) {
+        this.nom = nom;
+        this.salaire = salaire;
+        this.datedembauche = datedembauche;
+        this.heuresTravaillees = heuresTravaillees;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public double getSalaire() {
+        return salaire;
+    }
+
+    public String getDatedembauche() {
+        return datedembauche;
+    }
+
+    public int getHeuresTravaillees() {
+        return heuresTravaillees;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public void setSalaire(double salaire) {
+        this.salaire = salaire;
+    }
+
+    public void setDatedembauche(String datedembauche) {
+        this.datedembauche = datedembauche;
+    }
+
+    public void setHeuresTravaillees(int heuresTravaillees) {
+        this.heuresTravaillees = heuresTravaillees;
+    }
+
+    public double getSalaireComplet() {
+        return salaire + (heuresTravaillees * 100); 
+    }
+
+    @Override
+    public String toString() {
+        return "Employe{" +
+                "nom='" + nom + '\'' +
+                ", salaire=" + salaire +
+                ", datedembauche=" + datedembauche +
+                ", heuresTravaillees=" + heuresTravaillees +
+                '}';
+    }
+}
